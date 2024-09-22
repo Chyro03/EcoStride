@@ -1,96 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colores */
+  --verde-esmeralda: #2ECC71;
+  --azul-oceano: #3498DB;
+  --tono-arena: #F4D03F;
+  --blanco: #FFFFFF;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* Tipografía */
+  --fuente-titulos: 'Poppins', sans-serif;
+  --fuente-textos: 'Roboto', sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: var(--fuente-textos);
+  background-color: var(--blanco);
+  line-height: 1.6;
+  color: #333;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+header {
+  background-color: var(--verde-esmeralda);
+  color: white;
+  padding: 10px 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+nav ul {
+  list-style: none;
 }
 
-.card {
-  padding: 2em;
+nav ul li {
+  display: inline;
+  margin: 0 15px;
 }
 
-.read-the-docs {
-  color: #888;
+nav ul li a {
+  color: white;
+  text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.section-content {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.section-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.section-content p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--verde-esmeralda);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product {
+  display: flex;
+  padding: 50px 20px;
+  align-items: center;
+}
+
+.product h2 {
+  font-family: var(--fuente-titulos);
+}
+
+.product.reverse {
+  flex-direction: row-reverse;
+}
+
+.product-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.product-info {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.icono-producto {
+  font-size: 2rem;
+  color: var(--verde-esmeralda);
+  margin-bottom: 10px;
+}
+
+.about {
+  display: flex;
+  padding: 50px 20px;
+  align-items: center;
+}
+
+.about-info {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.achievements {
+  padding: 20px;
+  background-color: var(--tono-arena);
+  margin: 50px 20px;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+blockquote {
+  margin: 20px 0;
+  font-style: italic;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsividad y Mobile-first */
+.product, .about {
+  flex-direction: column;
+  text-align: center;
+}
+
+.product img, .about img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .product, .about {
+      flex-direction: row;
+      text-align: left;
   }
-  a:hover {
-    color: #747bff;
+
+  .product.reverse {
+      flex-direction: row-reverse;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .product img, .about img {
+      max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-content h1 {
+      font-size: 3rem;
+  }
+
+  .cta {
+      font-size: 1.2rem;
+      padding: 12px 24px;
+  }
+
+  .achievements {
+      margin: 50px 100px;
   }
 }

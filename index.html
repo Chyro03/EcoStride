@@ -1,13 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoStride</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección 1: Inicio -->
+  <section id="inicio">
+    <div class="section-content">
+      <h1>Bienvenido a EcoStrike</h1>
+      <p>Descubre nuestro primer producto creado con materiales reciclados de las playas de Colombia.</p>
+      <a href="#productos" class="cta">Ver productos</a>
+    </div>
+  </section>
+
+  <!-- Sección 2: Productos -->
+  <section id="productos">
+    <div class="product">
+      <div class="product-img">
+        <img src="producto1.jpg" alt="Producto 1">
+      </div>
+      <div class="product-info">
+        <i class="icono-producto"></i>
+        <h2>Zapatos EcoStrike 1</h2>
+        <p>Elaborados con materiales 100% reciclados, cómodos y con estilo único.</p>
+      </div>
+    </div>
+
+    <div class="product reverse">
+      <div class="product-info">
+        <i class="icono-producto"></i>
+        <h2>Zapatos EcoStrike 2</h2>
+        <p>Diseño innovador que cuida el planeta sin sacrificar comodidad.</p>
+      </div>
+      <div class="product-img">
+        <img src="producto2.jpg" alt="Producto 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Nosotros -->
+  <section id="nosotros">
+    <div class="about">
+      <div class="about-info">
+        <h2>Sobre nosotros</h2>
+        <p>EcoStrike es un proyecto que busca reducir el impacto ambiental utilizando materiales reciclados para
+          fabricar calzado único.</p>
+      </div>
+      <div class="about-img">
+        <img src="equipo.jpg" alt="Equipo EcoStrike">
+      </div>
+    </div>
+    <div class="achievements">
+      <h3>Nuestros logros</h3>
+      <p>Hemos recolectado más de 100 toneladas de plástico y colaborado con comunidades locales.</p>
+    </div>
+  </section>
+
+  <!-- Sección 4: Testimonios -->
+  <section id="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonials">
+      <blockquote>
+        <p>"Los zapatos más cómodos y eco-friendly que he usado!"</p>
+        <cite>- Juan Pérez</cite>
+      </blockquote>
+      <blockquote>
+        <p>"Me encanta saber que cada compra ayuda al planeta."</p>
+        <cite>- Ana Gómez</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 EcoStrike. Todos los derechos reservados.</p>
+  </footer>
+  <div id="app"></div>
+  <script type="module" src="/main.js"></script>
+</body>
 </html>
