@@ -109,3 +109,10 @@ const navLinks = document.querySelector(".nav-links");
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
+
+document.querySelectorAll(".nav-links").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.classList.remove("active");
+  });
+});

@@ -40,7 +40,7 @@ nav>div {
 }
 
 nav .logo img {
-  width: 250px;
+  width: 350px;
 }
 
 .positi{
@@ -55,7 +55,7 @@ nav .logo img {
   background-color: #000;
   margin-top: 20px;
   margin-right: 20px;
-  padding: 30px;
+  padding: 20px 30px;
   border-radius: 40px;
 }
 
@@ -279,7 +279,7 @@ canvas {
 
 .achievements {
   padding: 20px;
-  margin: 50px 20px;
+  margin: 20px 20px;
   text-align: center;
   position: relative;
   height: 50vh;
@@ -307,7 +307,7 @@ canvas {
 }
 
 p.custom-gradient {
-  background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0) 100%);
+  background: linear-gradient(180deg, #000 0%, rgba(18, 18, 18, 0) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.2px;
@@ -464,6 +464,9 @@ li {
 }
 
 @media (max-width: 1024px) {
+  nav .logo img {
+    width: 220px;
+  }
   .product.reverse {
     padding: 50px 20px;
 }
@@ -693,11 +696,11 @@ li {
   }
   .nav-links {
     position: fixed;
-    top: 65px;
+    top: 60px;
     right: 0;
     height: 100vh;
     width: 100%;
-    background-color: var(--azul-oceano);
+    background-color: #000;
     flex-direction: column;
     align-items: center;
     justify-content: center;
