@@ -26,9 +26,8 @@
 
 /* Estilos del nav */
 nav {
-  position: fixed;
+  position: relative;
   width: 100%;
-  background-color: #000;
   z-index: 2;
   top: 0;
 }
@@ -38,18 +37,26 @@ nav>div {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #000;
 }
 
 nav .logo img {
-  width: 220px;
+  width: 250px;
 }
 
+.positi{
+  position: fixed;
+  right: 0;
+}
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
   transition: transform 0.3s ease-in-out;
+  background-color: #000;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 30px;
+  border-radius: 40px;
 }
 
 .nav-links li {
@@ -91,7 +98,7 @@ nav .logo img {
   color: var(--blanco);
   font-size: 2.5rem;
   line-height: 1;
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .section-content h1>span {
@@ -115,7 +122,9 @@ nav .logo img {
 
 .cta {
   background: linear-gradient(90deg, #126234 0%, #123c58 100%);
-  border: 1px solid var(--azul-oceano);
+  -webkit-box-shadow: 10px 10px 15px -3px rgba(46, 204, 113, 0.35);
+  -moz-box-shadow: 10px 10px 15px -3px rgba(46, 204, 113, 0.35);
+  box-shadow: 8px 6px 10px -3px rgba(46, 204, 113, 0.35);
   border-radius: 15px;
   width: 302px;
   height: 55px;
@@ -125,14 +134,16 @@ nav .logo img {
   align-items: center;
   margin: auto;
   padding: 10px 20px;
+  margin-bottom: 30px;
   color: var(--blanco);
   text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
   transition: all 0.3s ease, transform 0.2s ease;
 }
 
 .cta:hover {
   background: linear-gradient(90deg, #123c58 0%, #126234 100%);
-  border: 1px solid var(--tono-arena);
   transform: scale(1.05);
 }
 
@@ -275,6 +286,11 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.widht-p{
+  width: 50%;
 }
 
 .achievements h3 {
@@ -427,6 +443,9 @@ li {
 
 
 @media (max-width: 1367px) {
+  .widht-p{
+    width: 80%;
+  }
   .product-img img {
     max-width: 800px;
   }
@@ -445,6 +464,12 @@ li {
 }
 
 @media (max-width: 1024px) {
+  .product.reverse {
+    padding: 50px 20px;
+}
+.product {
+  padding: 50px 20px;
+}
   .achievements {
     height: 20vh;
   }
@@ -490,6 +515,12 @@ li {
 }
 
 @media (max-width: 768px) {
+  .nav-links {
+    padding: 10px 30px;
+}
+  .sub-testimonios {
+    font-size: 2.125rem;
+}
   .cont-footer p {
     font-size: 1.2rem;
   }
@@ -543,6 +574,8 @@ li {
     text-align: left;
   }
 
+
+
   .about {
     flex-direction: column-reverse;
     text-align: center;
@@ -568,6 +601,10 @@ li {
 }
 
 @media (max-width: 430px) {
+  .product.reverse {
+
+    flex-direction: column;
+}
   .cont-footer {
     padding: 40px 40px;
     flex-direction: column;
@@ -603,6 +640,7 @@ li {
 
   .achievements {
     margin: 0;
+    margin-bottom: 40px;
   }
 
   p.custom-gradient {
@@ -648,7 +686,11 @@ li {
     margin-bottom: 60px;
     font-size: 1rem;
   }
-
+  nav{
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+  }
   .nav-links {
     position: fixed;
     top: 65px;
@@ -663,6 +705,9 @@ li {
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 3;
+    margin-top: 0;
+    margin-right: 0;
+    border-radius: 0;
   }
 
   .nav-links.active {
