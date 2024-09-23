@@ -19,17 +19,25 @@
 /* Seccion Inicio */
 
 .section-content {
+  margin-top: 20px !important;
   text-align: center;
   padding: 50px 20px;
 }
 
 /* Estilos del nav */
-nav {
+nav{
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  z-index: 2;
+  top: 0;
+}
+nav > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: transparent;
+  background-color: #000;
 }
 
 nav .logo img {
@@ -263,11 +271,11 @@ canvas{
   font-family: var(--fuente-titulos);
   color: var(--blanco);
   font-size: 3.125rem;
-  z-index: 2;
+  z-index: 1;
 }
 
 .achievements>p {
-  z-index: 2;
+  z-index: 1;
   color: var(--blanco);
   font-size: 1.375rem;
 }
@@ -286,7 +294,7 @@ p.custom-gradient {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 0;
 }
 
 .testimonials {
@@ -343,6 +351,10 @@ p.custom-gradient {
   background: var(--swiper-pagination-bullet-inactive-color, var(--verde-esmeralda)) !important;
 }
 /* END Seccion Testimonios */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--fuente-textos);
@@ -609,7 +621,7 @@ li{
 
   .nav-links {
     position: fixed;
-    top: 80px;
+    top: 65px;
     right: 0;
     height: 100vh;
     width: 100%;
@@ -620,6 +632,7 @@ li{
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
+    z-index: 3;
   }
 
   .nav-links.active {
