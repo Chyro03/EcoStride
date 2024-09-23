@@ -152,7 +152,14 @@ canvas{
 /* Seccion Productos */
 .product {
   display: flex;
-  padding: 50px 20px;
+  padding: 50px 80px;
+  align-items: center;
+}
+
+.product.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 50px 80px;
   align-items: center;
 }
 
@@ -197,7 +204,7 @@ canvas{
 
 .product-img img {
   width: 100%;
-  max-width: 900px;
+  max-width: 750px;
   height: auto;
   margin: 0 auto;
 }
