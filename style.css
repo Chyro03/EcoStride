@@ -128,6 +128,14 @@ nav .logo img {
 
 /* END Seccion Inicio */
 
+
+/* Video Zapatos */
+canvas{
+  width: 1280px;
+  height: 720px;
+}
+/* END Video Zapatos */
+
 /* Seccion Productos */
 .product {
   display: flex;
@@ -320,7 +328,7 @@ p.custom-gradient {
 
 body {
   font-family: var(--fuente-textos);
-  background: linear-gradient(191deg, #000000 0%, #061d2c 47.8%, #072614 100%);
+  background: linear-gradient(180deg, #000000 40%, #061d2c 60%, #072614 100%);
   color: #333;
 }
 
@@ -407,9 +415,14 @@ footer {
     width: 100%;
     color: var(--blanco);
   }
+  canvas{
+    width: 640px;
+    height: 360px;
+  }
 }
 
 @media (max-width: 768px) {
+
   .about-info hr {
     margin: auto;
     margin-bottom: 20px;
@@ -458,6 +471,10 @@ footer {
 }
 
 @media (max-width: 426px) {
+  canvas {
+    width: 320px;
+    height: 180px;
+}
   .achievements h3 {
     font-size: 1.3rem;
 }
